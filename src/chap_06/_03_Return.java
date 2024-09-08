@@ -12,6 +12,7 @@ public class _03_Return {
         return "서울시 어딘가";
     }
 
+
     // 호텔 이용엑티비티
     public static String getActivities(){
         return "볼링장, 탁구장, 노래방";
