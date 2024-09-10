@@ -8,10 +8,31 @@ public class BlackBox {
     String resolution;//해상도
     int price; // 가격
     String color; // 색상
+    int SerialNumber; // 시리얼 번호
+
+    static int counter=0; // 시리얼 번호를 생성하는 역할 ++(처음엔 0이었다가) 1,2,3,4,5 ...
 
     static boolean canAutoReport = false; // 자동 신고 기능
     //static을 붙이면 class변수가 되는데, 이는 모든 인스턴스(객체)들이 공유하는 특성이다.
     //모든객체가 false가 돼
+
+    BlackBox() {
+//        System.out.println("기본 생성자 호출");
+//        this.SerialNumber= ++counter; // +하고 들어감
+//        System.out.println("새로운 시리얼 넘버를 발급받았습니다.: "+ this.SerialNumber);
+    }
+
+    BlackBox(String modelName, String resolution, int price, String color){
+//        this(); // 기본생성자를 먼저 접근하게 한다.(기본 생성자 호출)
+//
+//        System.out.println("사용자 정의 생성자 호출");
+//        this.modelName=modelName;
+//        this.resolution=resolution;
+//        this.price=price;
+//        this.color=color;
+    }
+
+
 
 
     // 전달값이 없는 경우
@@ -79,6 +100,56 @@ public class BlackBox {
         // 클래스의 인스턴스변수 modelName에 바로 접근이 가능하다
         this.modelName+=modelName;
 
+    }
+
+
+
+
+    // Getter & Setter
+    // 외부에서 메서드를 통해 데이터에 접근하는거임
+    // Getter : 외부에서 객체데이터를 읽어올때
+    String getModelName(){
+        return modelName;
+    }
+
+    // Setter 의 느낌
+    // 외부에서 메서드를 통해 데이터를 변경할 때
+    void setModelName(String modelName){
+        this.modelName=modelName;
+    }
+
+    String getResolution(){
+        if(resolution==null || resolution.isEmpty()){
+            return "판매자에게 문의하세요";
+        }
+        return resolution;
+    }
+
+    void setResolution(String resolution){
+        this.resolution=resolution;
+    }
+
+    int getPrice(){
+        return price;
+    }
+
+    void setPrice(int price){
+        if(price<100000)
+        {
+            this.price=100000;
+        }
+        else {
+            this.price=price;
+        }
+
+    }
+
+    String getColor(){
+        return color;
+    }
+
+    void setColor(String color){
+        this.color=color;
     }
 }
 

@@ -13,9 +13,8 @@ public class _04_Comment {
 
 //        한줄 주석 단축키: 커서를 올려놓은 문장에 ctrl+/ 누르면 그 줄 주석이 된다.
         // 여러줄을 /* */로 주석하는 방법: ctrl+shift+/
-        /*int a=10;
+ /*       int a=10;
         int b=20;
         System.out.println(a+b);
-        */
-    }
+*/    }
 }

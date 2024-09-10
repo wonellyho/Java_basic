@@ -39,7 +39,7 @@ public class _05_VariableNaming {
         // 절대변하지 않는 상수는 대문자로 쓴다.
         // 자료형 앞에 final 을 넣어서 상수임을 선언
         final String CODE="KR";
-//        CODE="US"; // 안된다.
+/*        CODE="US"; // 안된다.*/
 
 
 

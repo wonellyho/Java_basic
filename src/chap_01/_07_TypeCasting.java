@@ -12,6 +12,7 @@ public class _07_TypeCasting {
             System.out.println((float) score); //93.0
             System.out.println((double) score); //93.0
 
+
             //float, double to int
             float score_f=93.7f; //93
             double score_d=93.8;
@@ -20,7 +21,7 @@ public class _07_TypeCasting {
 
             // 정수+실수 연산
             // score는 위에서 int로 선언했다.
-            score=93+(int)98.9; // 93+98
+            score=93+(int)98.9; // 93+98 =191
             System.out.println(score);
 
             score_d=93+93.8; // score_d를 실수형 자료형으로 먼저 선언했었다.  앞에 93은 자동으로 (double) 93이 된다.
@@ -32,10 +33,12 @@ public class _07_TypeCasting {
 
             // int -> long -> float -> double (자동 형변환)
 
-//            int convertedScoreInt=score_d; //186.8-> 186, 정수에서 실수로 그냥 변환은 안된다.
+              //int convertedScoreInt=score_d; //186.8-> 186, 정수에서 실수로 그냥 변환은 안된다.
             int convertedScoreInt=(int)score_d; //186.8-> 186
-
+            System.out.println(convertedScoreInt);
             //double -> float ->long ->int ( 수동 형변환 )
+
+
 
             // 숫자를 문자열로
 
@@ -44,6 +47,7 @@ public class _07_TypeCasting {
 
             // 방법1
             String s1=String.valueOf(93);
+            System.out.println(s1);
 
             // 방법2
             s1=Integer.toString(93); // 정수를 문자열 자료형으로 바궈주는 toString이 있다.
@@ -67,8 +71,8 @@ public class _07_TypeCasting {
             System.out.println(d); //93.8
 
 
-            int error =Integer.parseInt("자바"); // 자바라는 글자를 정수로 변환하려함
-            System.out.println(error); // 오류뜬다.
+//            int error =Integer.parseInt("자바"); // 자바라는 글자를 정수로 변환하려함
+//            System.out.println(error); // 오류뜬다.
 
         }
 }
